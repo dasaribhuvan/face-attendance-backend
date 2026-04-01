@@ -11,7 +11,7 @@ from sqlalchemy import (
     UniqueConstraint
 )
 
-from database.db import Base
+from backend.database.db import Base
 
 
 # -------------------------
