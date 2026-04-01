@@ -565,7 +565,7 @@ def teacher_request(
     }
 
 
-from utils.auth import create_access_token
+from backend.utils.auth import create_access_token
 
 
 class TeacherLogin(BaseModel):
