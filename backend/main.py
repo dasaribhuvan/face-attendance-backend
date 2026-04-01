@@ -14,6 +14,7 @@ from backend.routes.admin_routes import router as admin_router
 import os
 from dotenv import load_dotenv
 from passlib.context import CryptContext
+
 from backend.recognition.model_loader import get_face_app
 
 
@@ -34,19 +35,11 @@ pwd_context = CryptContext(
     deprecated="auto"
 )
 
+
+# -------------------------
+# FASTAPI APP
+# -------------------------
 app = FastAPI()
-
-@app.on_event("startup")
-def load_model():
-    print("Loading face model at startup...")
-    get_face_app()
-    print("Model ready")
-
-
-# -------------------------
-# CREATE TABLES
-# -------------------------
-Base.metadata.create_all(bind=engine)
 
 
 # -------------------------
@@ -87,18 +80,30 @@ def create_admin():
 # -------------------------
 @app.on_event("startup")
 def startup():
+
+    print("🚀 Starting Application...")
+
+    # Create tables
+    print("📦 Creating database tables...")
+    Base.metadata.create_all(bind=engine)
+
+    # Create admin
+    print("👤 Creating admin...")
     create_admin()
 
+    # Load Face Model
+    print("🧠 Loading face model...")
+    get_face_app()
 
-# -------------------------
-# CORS
-# -------------------------
+    print("✅ Application Ready")
+
+
 # -------------------------
 # CORS
 # -------------------------
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # allow all (temporary)
+    allow_origins=["*"],   # change later for production
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -121,7 +126,8 @@ app.include_router(admin_router)
 # -------------------------
 @app.get("/")
 def home():
-    return {"message": "API running"}
+    return {"message": "Face Attendance API Running 🚀"}
+
 
 @app.get("/health")
 def health():
