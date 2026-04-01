@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from pydantic import BaseModel
 from datetime import date, timedelta
 
-from database.db import SessionLocal
+from backend.database.db import SessionLocal
 from database.models import Timetable
 
 router = APIRouter()

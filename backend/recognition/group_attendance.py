@@ -1,9 +1,9 @@
 import json
 
-from database.db import SessionLocal
-from database.models import Embedding, Student
-from recognition.face_matching import recognize_face
-from recognition.model_loader import get_face_app
+from backend.database.db import SessionLocal
+from backend.database.models import Embedding, Student
+from backend.recognition.face_matching import recognize_face
+from backend.recognition.model_loader import get_face_app
 
 
 # cache embeddings in memory
