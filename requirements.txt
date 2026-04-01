@@ -5,6 +5,7 @@ sqlalchemy
 
 # ------------------- Database -------------------
 psycopg2-binary
+psycopg[binary]
 
 # ------------------- Request Handling -------------------
 python-multipart
