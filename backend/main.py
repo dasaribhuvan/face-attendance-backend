@@ -1,20 +1,20 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from database.db import engine, SessionLocal
-from database.models import Base, Admin
+from backend.database.db import engine, SessionLocal
+from backend.database.models import Base, Admin
 
-from routes.student_routes import router as student_router
-from routes.teacher_routes import router as teacher_router
-from routes.attendance_routes import router as attendance_router
-from routes.timetable_routes import router as timetable_router
-from routes.otp import router as otp_router
-from routes.admin_routes import router as admin_router
+from backend.routes.student_routes import router as student_router
+from backend.routes.teacher_routes import router as teacher_router
+from backend.routes.attendance_routes import router as attendance_router
+from backend.routes.timetable_routes import router as timetable_router
+from backend.routes.otp import router as otp_router
+from backend.routes.admin_routes import router as admin_router
 
 import os
 from dotenv import load_dotenv
 from passlib.context import CryptContext
-from recognition.model_loader import get_face_app
+from backend.recognition.model_loader import get_face_app
 
 
 # -------------------------

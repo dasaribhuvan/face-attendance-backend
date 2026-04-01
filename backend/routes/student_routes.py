@@ -1,12 +1,12 @@
 from fastapi import APIRouter, Depends, HTTPException, File, UploadFile, Form
 from sqlalchemy.orm import Session
 from datetime import datetime, timedelta, timezone
-from database.db import SessionLocal
-from database.models import Student, Embedding
+from backend.database.db import SessionLocal
+from backend.database.models import Student, Embedding
 from passlib.context import CryptContext
-from utils.auth import create_access_token, verify_token
-from recognition.arcface_embeddings import generate_embedding_from_images
-from database.models import OTP
+from backend.utils.auth import create_access_token, verify_token
+from backend.recognition.arcface_embeddings import generate_embedding_from_images
+from backend.database.models import OTP
 
 from typing import List
 import json

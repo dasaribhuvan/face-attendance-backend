@@ -3,10 +3,10 @@ from sqlalchemy.orm import Session
 from passlib.context import CryptContext
 from pydantic import BaseModel
 
-from database.db import SessionLocal
-from database.models import Admin
-from utils.auth import create_access_token
-from database.models import Teacher
+from backend.database.db import SessionLocal
+from backend.database.models import Admin
+from backend.utils.auth import create_access_token
+from backend.database.models import Teacher
 import os
 from dotenv import load_dotenv
 

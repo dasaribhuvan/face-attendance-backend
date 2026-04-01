@@ -4,9 +4,9 @@ from datetime import datetime, timedelta, timezone
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from database.db import SessionLocal
-from database.models import OTP
-from utils.send_email import send_otp_email
+from backend.database.db import SessionLocal
+from backend.database.models import OTP
+from backend.utils.send_email import send_otp_email
 
 
 router = APIRouter()

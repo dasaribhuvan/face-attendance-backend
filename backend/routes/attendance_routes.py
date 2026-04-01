@@ -1,19 +1,19 @@
 from fastapi import APIRouter, Body, Depends
 from sqlalchemy.orm import Session
-from database.db import SessionLocal
-from database.models import Attendance , Student
+from backend.database.db import SessionLocal
+from backend.database.models import Attendance , Student
 from sqlalchemy import func, extract
-from websocket_manager import manager
+from backend.websocket_manager import manager
 from datetime import date
 import json
 from datetime import datetime
-from database.db import SessionLocal
-from database.models import Attendance, Timetable
-from utils.auth import get_current_student
+from backend.database.db import SessionLocal
+from backend.database.models import Attendance, Timetable
+from backend.utils.auth import get_current_student
 
 
 from sqlalchemy import func, extract
-from utils.dependencies import get_current_student_id
+from backend.utils.dependencies import get_current_student_id
 from pydantic import BaseModel
 from typing import List
 from datetime import date
@@ -315,7 +315,7 @@ def subject(
 
 
 from fastapi import APIRouter, UploadFile, File, Form
-from recognition.group_attendance import process_group_images
+from backend.recognition.group_attendance import process_group_images
 
 
 
