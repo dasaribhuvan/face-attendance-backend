@@ -5,9 +5,9 @@ from passlib.context import CryptContext
 from datetime import date, datetime, timedelta
 from pydantic import BaseModel
 from fastapi.responses import StreamingResponse
-from database.db import SessionLocal
-from database.models import Teacher, Attendance, Student, Timetable, OTP
-from utils.auth import create_access_token
+from backend.database.db import SessionLocal
+from backend.database.models import Teacher, Attendance, Student, Timetable, OTP
+from backend.utils.auth import create_access_token
 
 
 router = APIRouter()
