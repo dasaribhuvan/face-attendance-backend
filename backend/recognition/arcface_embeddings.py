@@ -3,7 +3,7 @@ import cv2
 
 from scipy.datasets import face
 
-from recognition.model_loader import get_face_app
+from backend.recognition.model_loader import get_face_app
 
 
 def generate_embedding_from_images(images):
