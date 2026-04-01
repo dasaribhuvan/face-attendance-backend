@@ -4,7 +4,7 @@ from pydantic import BaseModel
 from datetime import date, timedelta
 
 from backend.database.db import SessionLocal
-from database.models import Timetable
+from backend.database.models import Timetable
 
 router = APIRouter()
 
