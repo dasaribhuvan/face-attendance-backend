@@ -1,0 +1,113 @@
+# -----------------------------
+# 🔥 LOGS
+# -----------------------------
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# -----------------------------
+# 📦 NODE / FRONTEND
+# -----------------------------
+node_modules/
+dist/
+dist-ssr/
+build/
+.vite/
+*.local
+
+# -----------------------------
+# 🐍 PYTHON / BACKEND
+# -----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+
+# Virtual environments
+venv/
+.env/
+env/
+.venv/
+
+# -----------------------------
+# 🔐 ENV VARIABLES (IMPORTANT)
+# -----------------------------
+.env
+.env.*
+
+# -----------------------------
+# 🧠 ML / MODELS (VERY IMPORTANT)
+# -----------------------------
+
+
+# -----------------------------
+# 📸 UPLOADS / DATA
+# -----------------------------
+uploads/
+images/
+dataset/
+
+# -----------------------------
+# 🖥️ OS FILES
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# 🧑‍💻 EDITORS
+# -----------------------------
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# -----------------------------
+# 🔧 BUILD FILES
+# -----------------------------
+*.tsbuildinfo
+
+# -----------------------------
+# 🔑 SECRETS
+# -----------------------------
+secret.key
+*.pem
+
+
+
+# -----------------------------
+# 🧪 TEST / CACHE
+# -----------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+
+# -----------------------------
+# 📦 PACKAGE LOCK (OPTIONAL)
+# -----------------------------
+# Uncomment if you DON'T want lock files
+# package-lock.json
+# yarn.lock
+
+# -----------------------------
+# 🚀 FASTAPI / UVICORN
+# -----------------------------
+*.pid
+
+# -----------------------------
+# 🧾 MISC
+# -----------------------------
+*.bak
+*.swp
+
+
+backend/models/
+models/
+*.onnx
+*.zip
+.insightface/
+
+

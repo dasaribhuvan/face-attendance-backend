@@ -1,0 +1,41 @@
+# ------------------- Core Backend -------------------
+fastapi
+uvicorn[standard]
+sqlalchemy
+
+# ------------------- Database -------------------
+psycopg2-binary
+
+# ------------------- Request Handling -------------------
+python-multipart
+pydantic
+python-dotenv
+
+# ------------------- Auth & Security -------------------
+bcrypt==3.2.0
+passlib[bcrypt]
+python-jose[cryptography]
+
+# ------------------- ML / Face Recognition -------------------
+numpy
+opencv-python-headless
+scikit-learn
+insightface
+onnxruntime
+pillow
+
+# ------------------- Optional but Recommended -------------------
+aiofiles
+requests
+tqdm
+
+# ------------------- Compatibility -------------------
+typing-extensions
+
+# ------------------- PDF Generation -------------------
+reportlab
+
+
+
+gunicorn
+onnx
